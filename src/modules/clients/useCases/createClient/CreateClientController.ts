@@ -6,6 +6,8 @@ export class CreateClienteController {
   async handle(request: Request, response: Response) {
     const { username, password } = request.body;
 
+    console.log(username);
+
     const createClientUseCase = new CreateClientUseCase();
     const result = await createClientUseCase.execute({
       username,
